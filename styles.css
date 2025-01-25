@@ -1,75 +1,78 @@
 /* General styles */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: yellow; /* Background color is yellow */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  /* Calculator container */
-  .calculator {
-    background-color: #009688; /* Calculator body is green */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    padding: 20px;
-    width: 300px;
-  }
-  
-  /* Display */
-  .display {
-    background-color: black;
-    color: white;
-    font-size: 2rem;
-    text-align: right;
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    overflow: hidden;
-    word-wrap: break-word;
-  }
-  
-  /* Button container */
-  .buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-  }
-  
-  /* General button styles */
-  .btn {
-    padding: 15px;
-    font-size: 1.2rem;
-    text-align: center;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-  
-  /* Special buttons (MRC, M-, M+, CE, ON/C) */
-  .btn:nth-child(-n + 4),
-  .btn:nth-child(4) {
-    background-color: white;
-    color: black;
-    font-weight: bold;
-  }
-  
- /* Number and operator buttons */
-.btn:not(:nth-child(-n + 4)) {
+
+/* Calculator container */
+.calculator {
+  background-color: #009688;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  width: 350px;
+
+}
+
+/* Display */
+.display {
+  background-color: black;
+  color: white;
+  font-size: 2rem;
+  text-align: right;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+/* Button container */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Ensure 5 buttons per row */
+  gap: 10px;
+}
+
+/* General button styles */
+.btn {
+  padding: 15px;
+  font-size: 0.9rem;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   background-color: teal;
   color: white;
+  font-weight: bold;
 }
-  
-/* Special styles for the + button */
+
+/* Special buttons (MRC, M-, M+, CE, ON/C) */
+.btn.special {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+
+}
+
 .btn.plus {
-  grid-row: span 2; /* Make the + button span two rows */
-  background-color: teal; /* Optional: different color for emphasis */
-  color: white;
+  grid-row: span 2 ;
+
 }
-  /* Hover effect */
-  .btn:hover {
-    opacity: 0.9;
-  }
+
+/* Hover effect for all buttons */
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Plus button styling */
+.btn.plus {
+  background-color: teal;
+  color: white;
+
+}

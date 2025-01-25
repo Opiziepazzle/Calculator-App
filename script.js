@@ -41,3 +41,17 @@ function memorySubtract() {
 function memoryRecall() {
   display.innerText = memory;
 }
+
+function toggleSign() {
+  const currentValue = display.innerText;
+
+  //check if the display have a valid number
+  if (currentValue !== "0" && currentValue !== "") {
+    //Toggle the sign
+    if (currentValue.startsWith("-")) {
+      display.innerText = currentValue.substring(1); //Remove the nagative sign
+    } else {
+      display.innerText = "-" + currentValue; //Add the negative sign
+    }
+  }
+}
